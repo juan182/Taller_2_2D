@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 using static UnityEditor.Searcher.SearcherWindow.Alignment;
 
 public class MovePlayer : MonoBehaviour
@@ -20,8 +21,13 @@ public class MovePlayer : MonoBehaviour
     //Posicion
     private Vector2 initialPosition;
 
+    //Balas
+    public GameObject bullet;
+    private float lastshot;
+
+    //Rigidbody
     private Rigidbody2D rigidbodyPlayer;
-    // Start is called before the first frame update
+
     void Start()
     {
         //Toma las propiedades del RigidBody2D y lo guarda
@@ -42,14 +48,14 @@ public class MovePlayer : MonoBehaviour
 
         if (horizontal < 0)
         {
-            transform.localScale = new Vector2(-2, 2);
-        }else if (horizontal > 0) transform.localScale = new Vector2(2, 2);
+            transform.localScale = new Vector3(-2, 2,0);
+        }else if (horizontal > 0) transform.localScale = new Vector3(2, 2,0);
 
         //Aplicar animacion
         animator.SetBool("running", horizontal != 0);
 
         //Condicional salto
-        if(Physics2D.Raycast(transform.position, Vector2.down, 0.5f))
+        if(Physics2D.Raycast(transform.position, Vector3.down, 0.5f))
         {
             Grounded = true;
         }
@@ -59,6 +65,12 @@ public class MovePlayer : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && Grounded)
         {
             Jump();
+        }
+
+        if(Input.GetKey(KeyCode.E) && Time.time > lastshot + 0.25f)
+        {
+            shot();
+            lastshot = Time.time;
         }
 
         //Regresa al inicio
@@ -71,6 +83,19 @@ public class MovePlayer : MonoBehaviour
     {
         //Toma la propiedad de velocidad de rigidbody y manten y constante 
         rigidbodyPlayer.velocity = new Vector2(horizontal, rigidbodyPlayer.velocity.y);
+    }
+
+    private void shot()
+    {
+        Vector3 direction;
+        if (transform.localScale.x == 2)
+        {
+            direction = Vector2.right;
+        }
+        else direction = Vector2.left;
+
+        GameObject bull = Instantiate(bullet, transform.position + direction*0.1f, Quaternion.identity);
+        bull.GetComponent<BulletScript>().setDirection(direction);
     }
 
     //Funcion reiniciar posicion 
