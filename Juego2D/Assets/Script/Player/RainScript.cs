@@ -11,5 +11,7 @@ public class RainScript : MonoBehaviour
         Vector3 position = transform.position;
         position.x = Jhon.transform.position.x;
         transform.position = position;
+
+        if (Jhon != null) return;
     }
 }

@@ -7,7 +7,7 @@ using static UnityEditor.Searcher.SearcherWindow.Alignment;
 public class MovePlayer : MonoBehaviour
 {
     // vida 
-    public int Health = 1;
+    public int Health = 10;
 
     //Movimiento
     float horizontal;
@@ -101,11 +101,11 @@ public class MovePlayer : MonoBehaviour
         Vector3 direction;
         if (transform.localScale.x == 2)
         {
-            direction = Vector2.right;
+            direction = Vector3.right;
         }
-        else direction = Vector2.left;
+        else direction = Vector3.left;
 
-        GameObject bull = Instantiate(bullet, transform.position + direction*0.1f, Quaternion.identity);
+        GameObject bull = Instantiate(bullet, transform.position + direction*0.2f, Quaternion.identity);
         bull.GetComponent<BulletScript>().setDirection(direction);
     }
 
@@ -132,6 +132,7 @@ public class MovePlayer : MonoBehaviour
         if (Health == 0)
         {
             animator.SetBool("dead", true);
+            Destroy(gameObject);
         }
     }
 
