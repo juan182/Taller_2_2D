@@ -32,6 +32,6 @@ public class BulletScript : MonoBehaviour
 
     public void destroyBullet()
     {
-        Destroy(rb);
+        Destroy(gameObject);
     }
 }

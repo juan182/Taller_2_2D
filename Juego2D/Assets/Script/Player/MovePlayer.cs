@@ -6,6 +6,9 @@ using static UnityEditor.Searcher.SearcherWindow.Alignment;
 
 public class MovePlayer : MonoBehaviour
 {
+    // vida 
+    public int Health = 1;
+
     //Movimiento
     float horizontal;
     float vertical;
@@ -60,6 +63,14 @@ public class MovePlayer : MonoBehaviour
             Grounded = true;
         }
         else Grounded = false;
+        if (Grounded == false)
+        {
+            animator.SetBool("jump", true);
+        }
+        else
+        {
+            animator.SetBool("jump", false);
+        }
 
         //Salto
         if (Input.GetKeyDown(KeyCode.Space) && Grounded)
@@ -74,7 +85,7 @@ public class MovePlayer : MonoBehaviour
         }
 
         //Regresa al inicio
-        if (vertical < -16.56932f)
+        if (vertical < -3.8f)
         {
             ResetPlayerPosition();
         }
@@ -102,6 +113,11 @@ public class MovePlayer : MonoBehaviour
     private void ResetPlayerPosition()
     {
         transform.position = initialPosition;
+        Health -= 1;
+        if (Health == 0)
+        {
+            animator.SetBool("dead", true);
+        }
     }
 
     private void Jump()
@@ -109,6 +125,17 @@ public class MovePlayer : MonoBehaviour
         rigidbodyPlayer.AddForce(Vector3.up * jumpForce);
     }
 
+    public void hit()
+    {
+        Health = Health - 1;
+
+        if (Health == 0)
+        {
+            animator.SetBool("dead", true);
+        }
+    }
+
+    #region Funciones extras
     //Funcion para aumentar la velocidad
     public void speedUp()
     {
@@ -126,4 +153,5 @@ public class MovePlayer : MonoBehaviour
     {
         transform.localScale = new Vector2(1, 1);
     }
+    #endregion
 }
