@@ -5,21 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class GoldenKey : MonoBehaviour
 {
-    public GameObject goldKey;
-    public string nameScene;
-
+    public string name;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player")) // Asegúrate de que tu jugador tenga la etiqueta "Player"
         {
-            SceneManager.LoadScene(nameScene);
-        }
-    }
-    void Update()
-    {
-        if (GameManager.Instance.appleGreenCount >= 50) // Cambia 5 por el número total de manzanas
-        {
-            goldKey.SetActive(true); // Activa la llave cuando se recolectan todas las manzanas
+            SceneManager.LoadScene(name); // Cambia "NombreDeTuEscena" por el nombre de la escena a la que deseas ir
         }
     }
 }
