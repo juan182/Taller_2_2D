@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     public int appleRedCount = 0;
 
     //Llave
-    public GameObject goldKey;
+    public int goldKey=0;
 
     public int score = 0;
     public float timePlayed = 0f;
@@ -34,18 +34,30 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void sumValue(int valueGreen, int valuered)
+    public void sumAppleGreen(int value)
     {
-        appleGreenCount += valueGreen;
-        appleRedCount += valuered;
+        appleGreenCount += value;
+       
     }
-    public void resetValue(int valueGreen, int valuered)
+
+    public void sumAppleRed(int value)
+    {
+        appleRedCount += value;
+    }
+
+
+    public void resetValue()
     {
         appleGreenCount = 0;
         appleRedCount = 0;
+        goldKey = 0;
+        listonesRecolectados = 0;
+
     }
     public int AppleGreenCount { get => appleGreenCount; set => appleGreenCount = value; }
-    
+    public int AppleRedCount { get => appleRedCount; set => appleRedCount = value; }
+    public int GoldKey { get => goldKey; set => goldKey = value; }
+    public int ListonesRecolectados { get => listonesRecolectados; set => listonesRecolectados = value; }
 
     // Start is called before the first frame update
     void Start()
@@ -64,6 +76,11 @@ public class GameManager : MonoBehaviour
         score += value;
     }
 
+    public void AddKey(int value)
+    {
+        goldKey += value;
+    }
+
     public void AddBadge()
     {
         listonesRecolectados++;
@@ -76,7 +93,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void LogroDesbloqueado(string nombreLogro)
+    public void LogroDesbloqueado(string nombreLogro)
     {
         logroDesbloqueado = true;
         Debug.Log("¡Logro desbloqueado! " + nombreLogro);
