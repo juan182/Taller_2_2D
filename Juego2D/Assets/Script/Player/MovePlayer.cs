@@ -12,10 +12,10 @@ public class MovePlayer : MonoBehaviour
     //Movimiento
     float horizontal;
     float vertical;
-    float Speed = 1;
+    float Speed = 4;
 
     //Salto
-    float jumpForce = 150;
+    float jumpForce = 215;
     bool Grounded;
 
     //Animacion
@@ -47,7 +47,7 @@ public class MovePlayer : MonoBehaviour
         //Toma el valor de Horizontal 
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = transform.position.y;
-        Debug.Log("Valor de vertical: " + vertical);
+        //Debug.Log("Valor de vertical: " + vertical);
 
         if (horizontal < 0)
         {
@@ -93,7 +93,7 @@ public class MovePlayer : MonoBehaviour
     private void FixedUpdate()
     {
         //Toma la propiedad de velocidad de rigidbody y manten y constante 
-        rigidbodyPlayer.velocity = new Vector2(horizontal*Speed, rigidbodyPlayer.velocity.y);
+        rigidbodyPlayer.velocity = new Vector2(horizontal, rigidbodyPlayer.velocity.y);
     }
 
     private void shot()
@@ -110,7 +110,7 @@ public class MovePlayer : MonoBehaviour
     }
 
     //Funcion reiniciar posicion 
-    private void ResetPlayerPosition()
+    public void ResetPlayerPosition()
     {
         transform.position = initialPosition;
         Health -= 1;
@@ -120,7 +120,7 @@ public class MovePlayer : MonoBehaviour
         }
     }
 
-    private void Jump()
+    public void Jump()
     {
         rigidbodyPlayer.AddForce(Vector3.up * jumpForce);
     }
@@ -131,26 +131,24 @@ public class MovePlayer : MonoBehaviour
 
         if (Health == 0)
         {
-            animator.SetBool("dead", true);
             Destroy(gameObject);
         }
     }
 
-    #region Banana Boost
-    public void SpeedBoost(float multiplier, float duration)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        StartCoroutine(SpeedBoostRoutine(multiplier, duration));
+        if (collision.gameObject.CompareTag("Enemie"))
+        {
+            // Lógica para manejar la colisión
+            hit();
+            Jump();
+        }
+        if (collision.gameObject.CompareTag("Trap"))
+        {
+            // Lógica para manejar la colisión
+            ResetPlayerPosition();
+        }
     }
-
-    private IEnumerator SpeedBoostRoutine(float multiplier, float duration)
-    {
-        float originalSpeed = Speed;
-        Speed *= multiplier;
-        yield return new WaitForSeconds(duration);
-        Speed = originalSpeed;
-    }
-    #endregion
-
 
     #region Funciones extras
     //Funcion para aumentar la velocidad

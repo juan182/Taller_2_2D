@@ -19,7 +19,6 @@ public class Timer : MonoBehaviour
     void Start()
     {
         TimerStart();
-        if (!isRunning) TimerStop();
     }
 
     public void TimerStart()

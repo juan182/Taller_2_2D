@@ -5,34 +5,22 @@ using UnityEngine;
 
 public class ScriptMenu : MonoBehaviour
 {
-    private MovePlayer player;
-
     //Panel
-    public GameObject GameOver;
     public GameObject Menu;
+    public GameObject Final;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        player = GetComponent<MovePlayer>();
+        Menu.SetActive(false);
+        Final.SetActive(false);
     }
-
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.M))
+        if (Input.GetKeyDown(KeyCode.M) && Final == false)
         {
             abrirMenu();
         }
-        if (player.Health <= 0) Derrota();
     }
-
-    public void Derrota()
-    {
-            GameOver.SetActive(true);
-            Time.timeScale = 0;
-    }
-
     public void abrirMenu()
     {
         bool isActive = Menu.activeSelf;

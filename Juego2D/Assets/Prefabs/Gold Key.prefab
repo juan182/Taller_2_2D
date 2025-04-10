@@ -143,4 +143,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdde45262d0128e48a32745a7ad20665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: SceneGame2
+  name: SceneCastillo
