@@ -15,7 +15,7 @@ public class MovePlayer : MonoBehaviour
     float Speed = 4;
 
     //Salto
-    float jumpForce = 150;
+    float jumpForce = 215;
     bool Grounded;
 
     //Animacion
@@ -47,7 +47,7 @@ public class MovePlayer : MonoBehaviour
         //Toma el valor de Horizontal 
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = transform.position.y;
-        Debug.Log("Valor de vertical: " + vertical);
+        //Debug.Log("Valor de vertical: " + vertical);
 
         if (horizontal < 0)
         {
@@ -110,7 +110,7 @@ public class MovePlayer : MonoBehaviour
     }
 
     //Funcion reiniciar posicion 
-    private void ResetPlayerPosition()
+    public void ResetPlayerPosition()
     {
         transform.position = initialPosition;
         Health -= 1;
@@ -142,6 +142,11 @@ public class MovePlayer : MonoBehaviour
             // Lógica para manejar la colisión
             hit();
             Jump();
+        }
+        if (collision.gameObject.CompareTag("Trap"))
+        {
+            // Lógica para manejar la colisión
+            ResetPlayerPosition();
         }
     }
 

@@ -12,7 +12,6 @@ public class PatrollScript : MonoBehaviour
 
     //Objeto
     private Rigidbody2D Rigidbody;
-    private MovePlayer Player;
 
     //Velocidad
     private float speed = 1;

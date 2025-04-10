@@ -7,11 +7,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     //Contador
-    public int appleGreenCount = 0;
-    public int appleRedCount = 0;
-
-    //Llave
-    public GameObject goldKey;
+    private int totalValue = 0;
 
     //Crea una instancio y la destruye si esta repetida 
     private void Awake()
@@ -27,17 +23,15 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void sumValue(int valueGreen, int valuered)
+    public void sumValue(int value)
     {
-        appleGreenCount += valueGreen;
-        appleRedCount += valuered;
+        totalValue += value;
     }
-    public void resetValue(int valueGreen, int valuered)
+    public void resetValue(int value)
     {
-        appleGreenCount = 0;
-        appleRedCount = 0;
+        totalValue = 0;
     }
-    public int AppleGreenCount { get => appleGreenCount; set => appleGreenCount = value; }
+    public int TotalValue { get => totalValue; set => totalValue = value; }
 
     // Start is called before the first frame update
     void Start()
