@@ -131,7 +131,6 @@ public class MovePlayer : MonoBehaviour
 
         if (Health == 0)
         {
-            animator.SetBool("dead", true);
             Destroy(gameObject);
         }
     }

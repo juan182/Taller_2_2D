@@ -20,7 +20,6 @@ public class GruntScript : MonoBehaviour
     public int Health = 3;
     float distance;
     private float lastShoot;
-    private Rigidbody2D rigidbodyGrunt;
 
     void Start()
     {
