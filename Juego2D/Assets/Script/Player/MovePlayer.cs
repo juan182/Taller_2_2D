@@ -136,6 +136,22 @@ public class MovePlayer : MonoBehaviour
         }
     }
 
+    #region Banana Boost
+    public void SpeedBoost(float multiplier, float duration)
+    {
+        StartCoroutine(SpeedBoostRoutine(multiplier, duration));
+    }
+
+    private IEnumerator SpeedBoostRoutine(float multiplier, float duration)
+    {
+        float originalSpeed = Speed;
+        Speed *= multiplier;
+        yield return new WaitForSeconds(duration);
+        Speed = originalSpeed;
+    }
+    #endregion
+
+
     #region Funciones extras
     //Funcion para aumentar la velocidad
     public void speedUp()
