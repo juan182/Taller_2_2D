@@ -1783,6 +1783,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51715e0a8ab79fa4aa44c037643b1a3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 8909680391276341845}
   txtHealth: {fileID: 3050696917717162145}
   txtGreenApple: {fileID: 3050696917717162144}
   gate: {fileID: 1096578020}
@@ -25592,6 +25593,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Jhon: {fileID: 8909680391276341844}
   bullet: {fileID: 7707120803425996378, guid: 999920d612b2b444289d0b53e5268940, type: 3}
+  Health: 3
 --- !u!70 &1997658704
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -26303,6 +26305,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2750207725494669500, guid: a5403fa77996ba94badcb3cc423815ff, type: 3}
   m_PrefabInstance: {fileID: 8909680391276341843}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8909680391276341845 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7018471515356160398, guid: a5403fa77996ba94badcb3cc423815ff, type: 3}
+  m_PrefabInstance: {fileID: 8909680391276341843}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8909680391276341844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 121f56c25247004459620ed843bee1d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

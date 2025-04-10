@@ -6,11 +6,16 @@ using UnityEngine.Tilemaps;
 
 public class GameControllerScene1 : MonoBehaviour
 {
+    [SerializeField]
     private MovePlayer player;
+
+    [SerializeField]
     public TextMeshProUGUI txtHealth;
 
     [SerializeField]
     private TextMeshProUGUI txtGreenApple;
+
+    [SerializeField]
     public GameObject gate;
 
     // Start is called before the first frame update
