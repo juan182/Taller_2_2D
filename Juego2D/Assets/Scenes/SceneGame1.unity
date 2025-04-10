@@ -25033,6 +25033,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gold Key
       objectReference: {fileID: 0}
+    - target: {fileID: 7771166923575683280, guid: 833ae125cdaca4a4f9251782c3665ca5, type: 3}
+      propertyPath: name
+      value: SceneCastillo
+      objectReference: {fileID: 0}
     - target: {fileID: 9164104826125374678, guid: 833ae125cdaca4a4f9251782c3665ca5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 13.416178
@@ -26013,6 +26017,10 @@ PrefabInstance:
     - target: {fileID: 2917690544397159400, guid: 833ae125cdaca4a4f9251782c3665ca5, type: 3}
       propertyPath: m_Name
       value: Gold Key
+      objectReference: {fileID: 0}
+    - target: {fileID: 7771166923575683280, guid: 833ae125cdaca4a4f9251782c3665ca5, type: 3}
+      propertyPath: name
+      value: SceneCastillo
       objectReference: {fileID: 0}
     - target: {fileID: 9164104826125374678, guid: 833ae125cdaca4a4f9251782c3665ca5, type: 3}
       propertyPath: m_LocalPosition.x
