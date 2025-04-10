@@ -16,9 +16,8 @@ public class GameManager : MonoBehaviour
     public int score = 0;
     public float timePlayed = 0f;
     public int health = 5;
-
-    public int listonesRecolectados = 0;
-    public bool logroDesbloqueado = false;
+    public int star = 0;
+    
 
     //Crea una instancio y la destruye si esta repetida 
     private void Awake()
@@ -51,13 +50,13 @@ public class GameManager : MonoBehaviour
         appleGreenCount = 0;
         appleRedCount = 0;
         goldKey = 0;
-        listonesRecolectados = 0;
+        star = 0;
 
     }
     public int AppleGreenCount { get => appleGreenCount; set => appleGreenCount = value; }
     public int AppleRedCount { get => appleRedCount; set => appleRedCount = value; }
     public int GoldKey { get => goldKey; set => goldKey = value; }
-    public int ListonesRecolectados { get => listonesRecolectados; set => listonesRecolectados = value; }
+    public int Star { get => star; set => star = value; }
 
     // Start is called before the first frame update
     void Start()
@@ -81,23 +80,9 @@ public class GameManager : MonoBehaviour
         goldKey += value;
     }
 
-    public void AddBadge()
+    public void AddStar(int value)
     {
-        listonesRecolectados++;
-        Debug.Log("Listones: " + listonesRecolectados);
-
-        // Lógica para logros
-        if (listonesRecolectados >= 3 && !logroDesbloqueado)
-        {
-            LogroDesbloqueado("Logros ?");
-        }
-    }
-
-    public void LogroDesbloqueado(string nombreLogro)
-    {
-        logroDesbloqueado = true;
-        Debug.Log("¡Logro desbloqueado! " + nombreLogro);
-
+        star += value;
     }
 
 

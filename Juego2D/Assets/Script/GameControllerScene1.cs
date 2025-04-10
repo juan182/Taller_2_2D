@@ -21,9 +21,13 @@ public class GameControllerScene1 : MonoBehaviour
     [SerializeField]
     public TextMeshProUGUI txtRedApple;
 
+    [SerializeField]
+    public TextMeshProUGUI txtStar;
+
     // Start is called before the first frame update
     void Start()
     {
+
     }
     // Update is called once per frame
     void Update()
@@ -31,6 +35,7 @@ public class GameControllerScene1 : MonoBehaviour
         ShowAppleGreen();
         ShowAppleRed();
         ShowHealth();
+        ShowStar();
 
         //Condicion para abrir puerta
         if (GameManager.Instance.appleGreenCount >= 10) //Al recolectar 5 manzanas verdes
@@ -43,6 +48,12 @@ public class GameControllerScene1 : MonoBehaviour
         }
 
     }
+
+    public void ShowStar()
+    {
+        
+    }
+    
 
     public void ShowAppleGreen()
     {
