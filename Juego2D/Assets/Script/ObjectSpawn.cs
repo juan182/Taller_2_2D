@@ -11,8 +11,6 @@ public class ObjectSpawn : MonoBehaviour
     public GameObject AppleSpawn;
     public int numObjSpawn = 5;
 
-    
-
     // Start is called before the first frame update
     void Start()
     {
