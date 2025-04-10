@@ -12,7 +12,7 @@ public class MovePlayer : MonoBehaviour
     //Movimiento
     float horizontal;
     float vertical;
-    float Speed = 4;
+    float Speed = 1;
 
     //Salto
     float jumpForce = 150;
@@ -93,7 +93,7 @@ public class MovePlayer : MonoBehaviour
     private void FixedUpdate()
     {
         //Toma la propiedad de velocidad de rigidbody y manten y constante 
-        rigidbodyPlayer.velocity = new Vector2(horizontal, rigidbodyPlayer.velocity.y);
+        rigidbodyPlayer.velocity = new Vector2(horizontal*Speed, rigidbodyPlayer.velocity.y);
     }
 
     private void shot()
