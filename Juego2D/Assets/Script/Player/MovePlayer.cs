@@ -120,7 +120,7 @@ public class MovePlayer : MonoBehaviour
         }
     }
 
-    private void Jump()
+    public void Jump()
     {
         rigidbodyPlayer.AddForce(Vector3.up * jumpForce);
     }
@@ -132,6 +132,16 @@ public class MovePlayer : MonoBehaviour
         if (Health == 0)
         {
             Destroy(gameObject);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemie"))
+        {
+            // Lógica para manejar la colisión
+            hit();
+            Jump();
         }
     }
 
