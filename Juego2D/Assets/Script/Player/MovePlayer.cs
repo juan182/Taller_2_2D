@@ -7,12 +7,12 @@ using static UnityEditor.Searcher.SearcherWindow.Alignment;
 public class MovePlayer : MonoBehaviour
 {
     // vida 
-    public int Health = 10;
+    public int Health = 4;
 
     //Movimiento
     float horizontal;
     float vertical;
-    float Speed = 4;
+    float Speed = 5;
 
     //Salto
     float jumpForce = 215;
@@ -137,12 +137,15 @@ public class MovePlayer : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        //Enemigo
         if (collision.gameObject.CompareTag("Enemie"))
         {
             // Lógica para manejar la colisión
             hit();
             Jump();
         }
+
+        //Trampa
         if (collision.gameObject.CompareTag("Trap"))
         {
             // Lógica para manejar la colisión
@@ -161,12 +164,6 @@ public class MovePlayer : MonoBehaviour
     public void jumpHigh()
     {
         jumpForce += jumpForce + 100;
-    }
-
-    //Enconger
-    public void shrinc()
-    {
-        transform.localScale = new Vector2(1, 1);
     }
     #endregion
 }
