@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7520426942170577629}
   - component: {fileID: 7738634174812249241}
   - component: {fileID: 7771166923575683280}
+  - component: {fileID: -2887963238793042699}
   m_Layer: 0
   m_Name: Gold Key
   m_TagString: Untagged
@@ -143,4 +144,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdde45262d0128e48a32745a7ad20665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: SceneCastillo
+  nameScene: 
+--- !u!95 &-2887963238793042699
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2917690544397159400}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0bf029f7757ba354ebd16b12dbffe811, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
