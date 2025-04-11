@@ -3,14 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GoldenKey : MonoBehaviour
+public class GoldenKey : RecolectableBase
 {
-    public string name;
-    private void OnTriggerEnter2D(Collider2D collision)
+    
+    public string nameScene;
+
+    public override void Collect(GameObject collector)
     {
-        if (collision.gameObject.CompareTag("Player")) // Asegúrate de que tu jugador tenga la etiqueta "Player"
-        {
-            SceneManager.LoadScene(name); // Cambia "NombreDeTuEscena" por el nombre de la escena a la que deseas ir
-        }
+        
+        DestroyItem();
+        SceneManager.LoadScene(nameScene);
     }
+
+
 }

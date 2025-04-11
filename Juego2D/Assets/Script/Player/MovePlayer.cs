@@ -6,13 +6,21 @@ using static UnityEditor.Searcher.SearcherWindow.Alignment;
 
 public class MovePlayer : MonoBehaviour
 {
+
     // vida 
-    public int Health = 5;
+    //Conecto health con GameManager para crear persistencia
+    public int Health
+    {
+        get { return GameManager.Instance.health; }
+        set { GameManager.Instance.health = value; }
+    }
+
+
 
     //Movimiento
     float horizontal;
     float vertical;
-    float Speed = 5;
+    float Speed = 2;
 
     //Salto
     float jumpForce = 215;
@@ -31,6 +39,9 @@ public class MovePlayer : MonoBehaviour
     //Rigidbody
     private Rigidbody2D rigidbodyPlayer;
 
+    
+
+
     void Start()
     {
         //Toma las propiedades del RigidBody2D y lo guarda
@@ -39,6 +50,7 @@ public class MovePlayer : MonoBehaviour
 
         //Registra posicion de inicio
         initialPosition = transform.position;
+
     }
 
     // Update is called once per frame
@@ -93,8 +105,16 @@ public class MovePlayer : MonoBehaviour
     private void FixedUpdate()
     {
         //Toma la propiedad de velocidad de rigidbody y manten y constante 
-        rigidbodyPlayer.velocity = new Vector2(horizontal, rigidbodyPlayer.velocity.y);
+        rigidbodyPlayer.velocity = new Vector2(horizontal*Speed, rigidbodyPlayer.velocity.y);
     }
+
+    public void HealUp(int healAmount)
+    {
+        Health += healAmount;
+        Health = Mathf.Clamp(Health, 0, 5);
+        GameManager.Instance.health = Health;
+    }
+
 
     private void shot()
     {
@@ -152,6 +172,21 @@ public class MovePlayer : MonoBehaviour
             ResetPlayerPosition();
         }
     }
+
+    #region BananaBoost
+    public void SpeedBoost(float multiplier, float duration)
+    {
+        StartCoroutine(SpeedBoostRoutine(multiplier, duration));
+    }
+
+    private IEnumerator SpeedBoostRoutine(float multiplier, float duration)
+    {
+        float originalSpeed = Speed;
+        Speed *= multiplier;
+        yield return new WaitForSeconds(duration);
+        Speed = originalSpeed;
+    }
+    #endregion
 
     #region Funciones extras
     //Funcion para aumentar la velocidad
