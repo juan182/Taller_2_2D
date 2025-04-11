@@ -7,7 +7,7 @@ using static UnityEditor.Searcher.SearcherWindow.Alignment;
 public class MovePlayer : MonoBehaviour
 {
     // vida 
-    public int Health = 4;
+    public int Health = 5;
 
     //Movimiento
     float horizontal;

@@ -30,7 +30,7 @@ public class GameControllerScene2 : MonoBehaviour
         ShowHealth();
 
         //Condicion para abrir puerta
-        if (GameManager.Instance.TotalValue >= 50) //Al recolectar 5 manzanas verdes
+        if (GameManager.Instance.TotalValue >= 80)
         {
             gate.SetActive(true); // Activa la llave cuando se recolectan todas las manzanas
         }

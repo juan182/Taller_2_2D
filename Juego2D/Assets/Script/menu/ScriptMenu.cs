@@ -7,16 +7,14 @@ public class ScriptMenu : MonoBehaviour
 {
     //Panel
     public GameObject Menu;
-    public GameObject Final;
 
     private void Start()
     {
         Menu.SetActive(false);
-        Final.SetActive(false);
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.M) && Final == false)
+        if (Input.GetKeyDown(KeyCode.M))
         {
             abrirMenu();
         }
