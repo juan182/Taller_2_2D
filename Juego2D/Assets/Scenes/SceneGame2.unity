@@ -401,17 +401,6 @@ PrefabInstance:
       addedObject: {fileID: 435877906}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d4977d0dc4752145a1ed4b87d1cd583, type: 3}
---- !u!114 &37486332 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5007837766099206599, guid: 9d4977d0dc4752145a1ed4b87d1cd583, type: 3}
-  m_PrefabInstance: {fileID: 37486331}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &37486333 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2787938738189838399, guid: 9d4977d0dc4752145a1ed4b87d1cd583, type: 3}
@@ -582,6 +571,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points: 2
+  sonidoRecolectado: {fileID: 0}
 --- !u!114 &153323975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1950,6 +1940,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points: 2
+  sonidoRecolectado: {fileID: 0}
 --- !u!114 &718171564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2334,6 +2325,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grunt_Gun (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6295805502116491489, guid: b96eb263b04795047a70f4d92540af78, type: 3}
+      propertyPath: Jhon
+      value: 
+      objectReference: {fileID: 8909680391276341844}
     - target: {fileID: 6620960151153180405, guid: b96eb263b04795047a70f4d92540af78, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.386
@@ -2828,11 +2823,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 8909680391276341845}
   txtHealth: {fileID: 37486333}
-  txtTotalValue: {fileID: 37486332}
+  txtTotalValue: {fileID: 0}
   gate: {fileID: 1096578020}
   txtGreenApple: {fileID: 2090519009}
   txtRedApple: {fileID: 1570976474}
-  txtStar: {fileID: 37486332}
+  txtStar: {fileID: 0}
 --- !u!1001 &958151795
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5296,6 +5291,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grunt_Gun (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6295805502116491489, guid: b96eb263b04795047a70f4d92540af78, type: 3}
+      propertyPath: Jhon
+      value: 
+      objectReference: {fileID: 8909680391276341844}
     - target: {fileID: 6620960151153180405, guid: b96eb263b04795047a70f4d92540af78, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.002451
@@ -6458,6 +6457,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points: 2
+  sonidoRecolectado: {fileID: 0}
 --- !u!114 &1811272968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7367,6 +7367,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points: 2
+  sonidoRecolectado: {fileID: 0}
 --- !u!61 &7417980012223752074
 BoxCollider2D:
   m_ObjectHideFlags: 0

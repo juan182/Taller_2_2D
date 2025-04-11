@@ -81,6 +81,8 @@ public class GameManager : MonoBehaviour
         {
             musicSource.Play();
         }
+
+
     }
 
     public void ToggleMusic()
@@ -101,5 +103,8 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+      
+        
+
     }
 }

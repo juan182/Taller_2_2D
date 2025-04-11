@@ -98,9 +98,9 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0.75
-    functionName: destroyPlayer
+    functionName: hit
     data: 
-    objectReferenceParameter: {fileID: 11500000, guid: 4f05064efc5a4aa48a9f818cfe3d74ff, type: 3}
+    objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0

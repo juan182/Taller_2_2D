@@ -7,10 +7,14 @@ public class GoldenKey : RecolectableBase
 {
     
     public string nameScene;
+    public AudioClip audio;
 
     public override void Collect(GameObject collector)
     {
-        
+        if (audio != null)
+        {
+            AudioSource.PlayClipAtPoint(audio, Camera.main.transform.position);
+        }
         DestroyItem();
         SceneManager.LoadScene(nameScene);
     }

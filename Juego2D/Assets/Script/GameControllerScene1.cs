@@ -12,8 +12,8 @@ public class GameControllerScene1 : MonoBehaviour
     [SerializeField]
     public TextMeshProUGUI txtHealth;
 
-    [SerializeField]
-    private TextMeshProUGUI txtTotalValue;
+    //[SerializeField]
+    //private TextMeshProUGUI txtTotalValue;
 
     [SerializeField]
     public GameObject gate;
@@ -35,7 +35,7 @@ public class GameControllerScene1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ShowValeu();
+        //ShowValeu();
         ShowHealth();
         ShowGreenApple();
         ShowRedApple();
@@ -49,10 +49,10 @@ public class GameControllerScene1 : MonoBehaviour
 
     }
 
-    public void ShowValeu()
-    {
-        txtTotalValue.text = GameManager.Instance.TotalValue.ToString();
-    }
+    //public void ShowValeu()
+    //{
+    //    txtTotalValue.text = GameManager.Instance.TotalValue.ToString();
+    //}
 
     public void ShowGreenApple()
     {
