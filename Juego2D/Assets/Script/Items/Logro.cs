@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Logro : RecolectableBase
 {
-    int starAmount=1;
+    int starAmount=100;
 
     public override void Collect(GameObject collector)
     {
