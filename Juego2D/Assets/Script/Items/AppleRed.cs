@@ -5,14 +5,14 @@ using UnityEngine;
 public class AppleRed : RecolectableBase
 {
     public int points = 10;
-    public AudioClip audio;
+    public AudioClip audioAR;
     public override void Collect(GameObject collector)
     {
         GameManager.Instance.sumRedApple(points);
 
-        if (audio != null)
+        if (audioAR != null)
         {
-            AudioSource.PlayClipAtPoint(audio, Camera.main.transform.position);
+            AudioSource.PlayClipAtPoint(audioAR, Camera.main.transform.position);
         }
 
         DestroyItem();

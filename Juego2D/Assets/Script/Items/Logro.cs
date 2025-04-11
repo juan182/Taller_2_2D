@@ -5,14 +5,14 @@ using UnityEngine;
 public class Logro : RecolectableBase
 {
     int starAmount=100;
-    public AudioClip audio;
+    public AudioClip audioL;
 
     public override void Collect(GameObject collector)
     {
         GameManager.Instance.sumStar(starAmount);
-        if (audio != null)
+        if (audioL != null)
         {
-            AudioSource.PlayClipAtPoint(audio, Camera.main.transform.position);
+            AudioSource.PlayClipAtPoint(audioL, Camera.main.transform.position);
         }
         DestroyItem();
     }

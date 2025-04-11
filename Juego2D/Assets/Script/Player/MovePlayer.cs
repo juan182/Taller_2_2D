@@ -15,7 +15,7 @@ public class MovePlayer : MonoBehaviour
         set { GameManager.Instance.health = value; }
     }
 
-
+    
 
     //Movimiento
     float horizontal;
@@ -50,7 +50,6 @@ public class MovePlayer : MonoBehaviour
 
         //Registra posicion de inicio
         initialPosition = transform.position;
-
     }
 
     // Update is called once per frame
@@ -163,6 +162,7 @@ public class MovePlayer : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemie"))
         {
             // Lógica para manejar la colisión
+            
             hit();
             Jump();
         }

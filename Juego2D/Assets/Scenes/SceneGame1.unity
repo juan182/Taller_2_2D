@@ -299,7 +299,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points: 2
-  audio: {fileID: 0}
+  audioAG: {fileID: 0}
 --- !u!114 &16834106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2664,7 +2664,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points: 2
-  audio: {fileID: 0}
+  audioAG: {fileID: 0}
 --- !u!114 &890945438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26427,7 +26427,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points: 2
-  audio: {fileID: 0}
+  audioAG: {fileID: 0}
 --- !u!114 &1203952538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33412,7 +33412,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points: 2
-  audio: {fileID: 0}
+  audioAG: {fileID: 0}
 --- !u!114 &1879279994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34653,6 +34653,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AppleRed
       objectReference: {fileID: 0}
+    - target: {fileID: 2578659285275678226, guid: b54139265f1aee04fb99befe0f6ac1c5, type: 3}
+      propertyPath: audioAR
+      value: 
+      objectReference: {fileID: 8300000, guid: 2725d6d41b792cd42a03783b361e69b0, type: 3}
     - target: {fileID: 2667718148316102533, guid: b54139265f1aee04fb99befe0f6ac1c5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.169528
@@ -35011,10 +35015,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7171015649214126839, guid: 6abd6b8152704584aa2e9b4f5a9002be, type: 3}
       propertyPath: m_Name
       value: AppleGreen
@@ -35052,6 +35052,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heal: 3
+  audioH: {fileID: 8300000, guid: 844bdb4d52107d844ab10b981fcd3182, type: 3}
 --- !u!114 &7461570582617750042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35114,6 +35115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedBoost: 2
   duration: 2
+  audioB: {fileID: 8300000, guid: b5873234c55904943b0abe81db5d2ee5, type: 3}
 --- !u!114 &8373433058463963448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35207,6 +35209,10 @@ PrefabInstance:
       propertyPath: Health
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 7018471515356160398, guid: a5403fa77996ba94badcb3cc423815ff, type: 3}
+      propertyPath: hitSound
+      value: 
+      objectReference: {fileID: 8300000, guid: b474fb0ba1e94ce4aa7bf81e1051c4aa, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
