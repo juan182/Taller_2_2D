@@ -7,8 +7,14 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    //Contador
-    private int totalValue = 0;
+    
+    //Recolectables
+    private int greenApple = 0;
+    private int redApple = 0;
+    private int star = 0;
+    private int goldenKey = 0;
+
+    public int health = 5;
 
     //Musica
     public AudioSource musicSource;
@@ -28,15 +34,41 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void sumValue(int value)
+    
+
+    public void sumGreenApple(int value)
     {
-        totalValue += value;
+        greenApple += value;
     }
+
+    public void sumRedApple(int value)
+    {
+        redApple += value;
+    }
+
+    public void sumStar(int value)
+    {
+        star += value;
+    }
+
     public void resetValue(int value)
     {
-        totalValue = 0;
+        
+        greenApple = 0;
+        redApple = 0;
+        star = 0;
+        goldenKey = 0;
+        health = 5;
     }
-    public int TotalValue { get => totalValue; set => totalValue = value; }
+
+    //Contador
+    public int TotalValue => greenApple + redApple + star;
+
+    public int GreenApple { get => greenApple; set => greenApple = value; }
+    public int Star { get => star; set => star = value; }
+    public int RedApple { get => redApple; set => redApple = value; }
+    public int GoldenKey { get => goldenKey; set => goldenKey = value; }
+
 
     // Start is called before the first frame update
     void Start()
