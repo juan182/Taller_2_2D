@@ -9,7 +9,7 @@ public class Coin : RecolectableBase
 
     public override void Collect(GameObject collector)
     {
-        GameManager.Instance.sumStar(coinAmount);
+        GameManager.Instance.sumCoin(coinAmount);
         if (audioC != null)
         {
             AudioSource.PlayClipAtPoint(audioC, Camera.main.transform.position);

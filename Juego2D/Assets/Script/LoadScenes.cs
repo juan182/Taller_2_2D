@@ -19,7 +19,12 @@ public class LoadScenes : MonoBehaviour
     //Cargar scene 
     public void LoadScene(string nameScene)
     {
+        if (Timer.Instance != null)
+        {
+            Timer.Instance.TimerStart(); 
+        }
         SceneManager.LoadScene(nameScene);
+
     }
 
     public void CloseGame()

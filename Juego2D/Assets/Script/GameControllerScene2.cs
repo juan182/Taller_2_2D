@@ -55,9 +55,10 @@ public class GameControllerScene2 : MonoBehaviour
         ShowRedApple();
         ShowStar();
         ShowBag();
-        ShowCoin();
-        ShowSword();
         ShowScore();
+
+        ShowCoin();    
+        ShowSword();
 
         //Condicion para abrir puerta
         if (GameManager.Instance.TotalValue >= 78) //Al recolectar 5 manzanas verdes
@@ -77,14 +78,14 @@ public class GameControllerScene2 : MonoBehaviour
         txtBag.text = GameManager.Instance.Bag.ToString();
     }
 
-    public void ShowSword()
-    {
-        txtSword.text = GameManager.Instance.Sword.ToString();
-    }
-
     public void ShowCoin()
     {
-        txtCoin.text = GameManager.Instance.Coin.ToString();
+        txtCoin.text = GameManager.Instance.Coin.ToString(); 
+    }
+
+    public void ShowSword()
+    {
+        txtSword.text = GameManager.Instance.Sword.ToString(); 
     }
 
 

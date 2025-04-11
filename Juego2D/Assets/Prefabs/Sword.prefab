@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 2957794271129718832}
   - component: {fileID: 8367598891090938997}
   - component: {fileID: 7978283995373607986}
-  - component: {fileID: 7786054368541386978}
   - component: {fileID: 874766612864322083}
   - component: {fileID: 383546740373428042}
+  - component: {fileID: 7177845754315818644}
   m_Layer: 0
   m_Name: Sword
   m_TagString: Untagged
@@ -100,19 +100,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19293de5e0945b3418bf20bb85e2ba9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7786054368541386978
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8155611441731310641}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfad12fd647fd3d40aab0fd9e03d0b9a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioL: {fileID: 8300000, guid: 70313f3daa1a19b469f8e255117612c9, type: 3}
 --- !u!61 &874766612864322083
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -179,3 +166,16 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7177845754315818644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8155611441731310641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 136644fdc108e2048a7bab300cacf13e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSw: {fileID: 8300000, guid: 70313f3daa1a19b469f8e255117612c9, type: 3}

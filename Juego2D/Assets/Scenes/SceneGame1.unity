@@ -34442,6 +34442,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3166166355364061710, guid: 9d4977d0dc4752145a1ed4b87d1cd583, type: 3}
+      propertyPath: m_Name
+      value: txtSegundos
+      objectReference: {fileID: 0}
     - target: {fileID: 3474976917951534232, guid: 9d4977d0dc4752145a1ed4b87d1cd583, type: 3}
       propertyPath: m_SizeDelta.x
       value: 573.2999
@@ -34518,6 +34522,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ImageStar
       objectReference: {fileID: 0}
+    - target: {fileID: 7772747004376266380, guid: 9d4977d0dc4752145a1ed4b87d1cd583, type: 3}
+      propertyPath: m_Name
+      value: txtMinutos
+      objectReference: {fileID: 0}
     - target: {fileID: 7783094339040727344, guid: 9d4977d0dc4752145a1ed4b87d1cd583, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -34534,6 +34542,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 5199979006384268662, guid: 174cd13a4c04d4944a6e414d9e3987f4, type: 3}
+    - target: {fileID: 8209277580068297780, guid: 9d4977d0dc4752145a1ed4b87d1cd583, type: 3}
+      propertyPath: m_Name
+      value: txtMiliSegundos
+      objectReference: {fileID: 0}
+    - target: {fileID: 8394576132316049937, guid: 9d4977d0dc4752145a1ed4b87d1cd583, type: 3}
+      propertyPath: m_fontSize
+      value: 72
+      objectReference: {fileID: 0}
+    - target: {fileID: 8394576132316049937, guid: 9d4977d0dc4752145a1ed4b87d1cd583, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8584474585991601856, guid: 9d4977d0dc4752145a1ed4b87d1cd583, type: 3}
       propertyPath: m_Sprite
       value: 

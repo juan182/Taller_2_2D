@@ -27,13 +27,17 @@ public class GameManager : MonoBehaviour
     public AudioSource musicSource;
     public bool isMusicOn = true;
 
+
     //Crea una instancio y la destruye si esta repetida 
     private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
+
             DontDestroyOnLoad(gameObject);
+
+            
         }
         else
         {
@@ -49,6 +53,7 @@ public class GameManager : MonoBehaviour
     public void sumSword(int value)
     {
         sword += value;
+        Debug.Log("Sword sumada: " + value + " | Total sword: " + sword);
     }
 
     public void sumCoin(int value)
@@ -72,7 +77,7 @@ public class GameManager : MonoBehaviour
     }
 
     
-    public void resetValue(int value)
+    public void resetValue()
     {
         
         greenApple = 0;
@@ -88,8 +93,7 @@ public class GameManager : MonoBehaviour
 
     //Contador
     public int TotalValue => greenApple + redApple ;
-    public int Score => greenApple + redApple+star+bag+coin+sword;
-
+    public int Score => greenApple + redApple + star + bag + coin + sword;
     public int GreenApple { get => greenApple; set => greenApple = value; }
     public int Star { get => star; set => star = value; }
     public int RedApple { get => redApple; set => redApple = value; }
@@ -134,4 +138,5 @@ public class GameManager : MonoBehaviour
         
 
     }
+    
 }
