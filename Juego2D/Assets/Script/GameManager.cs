@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
 
     public int health = 5;
 
+    public int score = 0;
+
     //Musica
     public AudioSource musicSource;
     public bool isMusicOn = true;
@@ -51,6 +53,7 @@ public class GameManager : MonoBehaviour
         star += value;
     }
 
+    
     public void resetValue(int value)
     {
         
@@ -62,7 +65,8 @@ public class GameManager : MonoBehaviour
     }
 
     //Contador
-    public int TotalValue => greenApple + redApple + star;
+    public int TotalValue => greenApple + redApple ;
+    public int Score => greenApple + redApple+star;
 
     public int GreenApple { get => greenApple; set => greenApple = value; }
     public int Star { get => star; set => star = value; }
