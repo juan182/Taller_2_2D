@@ -16,7 +16,7 @@ public class ScriptMenu : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.M) && Final == false)
+        if (Input.GetKeyDown(KeyCode.M) && !Final.activeSelf)
         {
             abrirMenu();
         }

@@ -8,7 +8,7 @@ public class AppleRed : RecolectableBase
 
     public override void Collect(GameObject collector)
     {
-        GameManager.Instance.sumAppleRed(points);
+        GameManager.Instance.sumRedApple(points);
         DestroyItem();
     }
 }

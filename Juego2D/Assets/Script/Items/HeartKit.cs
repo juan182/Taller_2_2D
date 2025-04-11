@@ -8,10 +8,10 @@ public class HeartKit : MonoBehaviour, Recolectable
 
     public void Collect(GameObject collector)
     {
-        HealthPlayer health = collector.GetComponent<HealthPlayer>();
-        if (health != null)
+        MovePlayer player = collector.GetComponent<MovePlayer>();
+        if (player != null)
         {
-            health.Health(heal);
+            player.HealUp(heal);
         }
             
 

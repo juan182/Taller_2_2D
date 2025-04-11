@@ -8,7 +8,7 @@ public class Logro : RecolectableBase
 
     public override void Collect(GameObject collector)
     {
-        GameManager.Instance.AddStar(starAmount);
+        GameManager.Instance.sumStar(starAmount);
         DestroyItem();
     }
 }
