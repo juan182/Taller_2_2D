@@ -317,7 +317,7 @@ GameObject:
   - component: {fileID: 1018053750733081511}
   - component: {fileID: 8705948435673187997}
   m_Layer: 5
-  m_Name: AppleRed
+  m_Name: CoinB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -950,7 +950,7 @@ GameObject:
   - component: {fileID: 7181743877048554776}
   - component: {fileID: 7783094339040727344}
   m_Layer: 5
-  m_Name: ImageAppleG
+  m_Name: ImageCoinS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1003,7 +1003,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -6367837219966448765, guid: 375a132719b8f114aadcfda6bf62f8b1, type: 3}
+  m_Sprite: {fileID: -7966776921622821435, guid: 1dbf5dede7c691641bc771e42b2de99b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1313,7 +1313,7 @@ GameObject:
   - component: {fileID: 6404481182069191550}
   - component: {fileID: 8584474585991601856}
   m_Layer: 5
-  m_Name: ImageAppleG
+  m_Name: ImageCoinB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1366,7 +1366,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -3989417037294542392, guid: dc095ce8d2086f541bd26c7e3a71ef12, type: 3}
+  m_Sprite: {fileID: -4080278737599844964, guid: fdd7c39b6deb3f840b5fc0e9cbc6cb00, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2029,7 +2029,7 @@ GameObject:
   - component: {fileID: 8621103116728915640}
   - component: {fileID: 8096314834444054059}
   m_Layer: 5
-  m_Name: AppleGreen
+  m_Name: CoinS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
