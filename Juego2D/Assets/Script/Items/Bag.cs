@@ -2,21 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Banana : RecolectableBase
+public class Bag : RecolectableBase
 {
-    public float speedBoost = 2f;
-    public float duration = 2f;
+    int bag = 20;
     public AudioClip audioB;
+
     public override void Collect(GameObject collector)
     {
+        GameManager.Instance.sumBag(bag);
         if (audioB != null)
         {
             AudioSource.PlayClipAtPoint(audioB, Camera.main.transform.position);
         }
-        MovePlayer play = collector.GetComponent<MovePlayer>();
-        if (play != null)
-            play.SpeedBoost(speedBoost, duration);
-
         DestroyItem();
     }
 }

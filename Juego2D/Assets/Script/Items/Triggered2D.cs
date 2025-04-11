@@ -15,4 +15,6 @@ public class Triggered2D : MonoBehaviour
             }
         }
     }
+
+    
 }

@@ -145,6 +145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameScene: 
+  audioGK: {fileID: 8300000, guid: 70313f3daa1a19b469f8e255117612c9, type: 3}
 --- !u!95 &-2887963238793042699
 Animator:
   serializedVersion: 5

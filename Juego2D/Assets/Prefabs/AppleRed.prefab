@@ -158,6 +158,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points: 10
+  audioAR: {fileID: 8300000, guid: 2725d6d41b792cd42a03783b361e69b0, type: 3}
 --- !u!95 &6694551418418257037
 Animator:
   serializedVersion: 5
