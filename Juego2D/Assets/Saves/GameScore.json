@@ -1,11 +1,11 @@
 {
-    "playerName": "londra",
-    "score": 553,
-    "time": "00:58:94",
-    "greenApple": 18,
-    "redApple": 80,
-    "star": 300,
-    "sword": 100,
-    "coin": 15,
-    "bag": 40
+    "playerName": "Juan",
+    "score": 269,
+    "time": "00:40:61",
+    "greenApple": 14,
+    "redApple": 70,
+    "star": 100,
+    "sword": 0,
+    "coin": 5,
+    "bag": 80
 }

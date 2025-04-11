@@ -9295,8 +9295,8 @@ GameObject:
   - component: {fileID: 6458438867574941703}
   - component: {fileID: 3603878017424778014}
   m_Layer: 0
-  m_Name: Slime_green
-  m_TagString: Enemie
+  m_Name: Saw
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9507,7 +9507,7 @@ Animator:
   m_GameObject: {fileID: 4585955576302743646}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e0b1adcfcc4a7cd459c0c5de1a4c67d2, type: 2}
+  m_Controller: {fileID: 9100000, guid: b2de446e2327c5f4989f4c60b3ce55ef, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
