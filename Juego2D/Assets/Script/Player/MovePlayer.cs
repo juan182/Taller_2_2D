@@ -149,9 +149,11 @@ public class MovePlayer : MonoBehaviour
     {
         Health = Health - 1;
 
-        if (Health == 0)
+        if (Health <= 0)
         {
-            Destroy(gameObject);
+            ResetPlayerPosition();
+            //Destroy(gameObject);
+            Health = 5;
         }
     }
 
