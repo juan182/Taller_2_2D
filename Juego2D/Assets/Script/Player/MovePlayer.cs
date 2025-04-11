@@ -187,18 +187,4 @@ public class MovePlayer : MonoBehaviour
         Speed = originalSpeed;
     }
     #endregion
-
-    #region Funciones extras
-    //Funcion para aumentar la velocidad
-    public void speedUp()
-    {
-        horizontal += horizontal * Speed;
-    }
-
-    //Aumentar el salto
-    public void jumpHigh()
-    {
-        jumpForce += jumpForce + 100;
-    }
-    #endregion
 }

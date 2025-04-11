@@ -1206,7 +1206,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &435877906
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7079,10 +7079,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4749750003359069112}
   - component: {fileID: 1646555117150212656}
-  - component: {fileID: 6836250436980062415}
   - component: {fileID: 5175024602119699839}
   - component: {fileID: 6458438867574941703}
   - component: {fileID: 3603878017424778014}
+  - component: {fileID: 6458438867574941704}
   m_Layer: 0
   m_Name: Slime_green
   m_TagString: Enemie
@@ -7290,6 +7290,27 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 6
+--- !u!95 &6458438867574941704
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4585955576302743646}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b2de446e2327c5f4989f4c60b3ce55ef, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6603535256137290277
 GameObject:
   m_ObjectHideFlags: 0
@@ -7318,27 +7339,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19293de5e0945b3418bf20bb85e2ba9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!95 &6836250436980062415
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4585955576302743646}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e0b1adcfcc4a7cd459c0c5de1a4c67d2, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &7206709932452825052
 Transform:
   m_ObjectHideFlags: 0
