@@ -27,6 +27,10 @@ public class GameControllerScene1 : MonoBehaviour
     [SerializeField]
     public TextMeshProUGUI txtStar;
 
+
+    [SerializeField]
+    public TextMeshProUGUI txtScore;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,6 +45,8 @@ public class GameControllerScene1 : MonoBehaviour
         ShowRedApple();
         ShowStar();
 
+        ShowScore();
+
         //Condicion para abrir puerta
         if (GameManager.Instance.TotalValue >= 78) //Al recolectar manzanas
         {
@@ -48,7 +54,10 @@ public class GameControllerScene1 : MonoBehaviour
         }
 
     }
-
+    public void ShowScore()
+    {
+        txtScore.text = "Score: " + GameManager.Instance.Score.ToString();
+    }
     //public void ShowValeu()
     //{
     //    txtTotalValue.text = GameManager.Instance.TotalValue.ToString();

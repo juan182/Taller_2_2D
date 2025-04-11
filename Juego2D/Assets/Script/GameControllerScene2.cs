@@ -24,8 +24,22 @@ public class GameControllerScene2 : MonoBehaviour
     [SerializeField]
     public TextMeshProUGUI txtRedApple;
 
-    //[SerializeField]
-    //public TextMeshProUGUI txtStar;
+    [SerializeField]
+    public TextMeshProUGUI txtStar;
+
+    [SerializeField]
+    public TextMeshProUGUI txtBag;
+
+    [SerializeField]
+    public TextMeshProUGUI txtCoin;
+
+    [SerializeField]
+    public TextMeshProUGUI txtSword;
+
+    [SerializeField]
+    public TextMeshProUGUI txtScore;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -39,7 +53,11 @@ public class GameControllerScene2 : MonoBehaviour
         ShowHealth();
         ShowGreenApple();
         ShowRedApple();
-        //ShowStar();
+        ShowStar();
+        ShowBag();
+        ShowCoin();
+        ShowSword();
+        ShowScore();
 
         //Condicion para abrir puerta
         if (GameManager.Instance.TotalValue >= 78) //Al recolectar 5 manzanas verdes
@@ -49,10 +67,26 @@ public class GameControllerScene2 : MonoBehaviour
 
     }
 
-    //public void ShowValeu()
-    //{
-    //    txtTotalValue.text = GameManager.Instance.TotalValue.ToString();
-    //}
+    public void ShowScore()
+    {
+        txtScore.text = "Score: "+GameManager.Instance.Score.ToString();
+    }
+
+    public void ShowBag()
+    {
+        txtBag.text = GameManager.Instance.Bag.ToString();
+    }
+
+    public void ShowSword()
+    {
+        txtSword.text = GameManager.Instance.Sword.ToString();
+    }
+
+    public void ShowCoin()
+    {
+        txtCoin.text = GameManager.Instance.Coin.ToString();
+    }
+
 
     public void ShowGreenApple()
     {
@@ -64,10 +98,10 @@ public class GameControllerScene2 : MonoBehaviour
         txtRedApple.text = GameManager.Instance.RedApple.ToString();
     }
 
-    //public void ShowStar()
-    //{
-    //    txtStar.text = GameManager.Instance.Star.ToString();
-    //}
+    public void ShowStar()
+    {
+        txtStar.text = GameManager.Instance.Star.ToString();
+    }
 
     public void ShowHealth()
     {
