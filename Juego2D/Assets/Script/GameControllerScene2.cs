@@ -18,6 +18,15 @@ public class GameControllerScene2 : MonoBehaviour
     [SerializeField]
     public GameObject gate;
 
+    [SerializeField]
+    public TextMeshProUGUI txtGreenApple;
+
+    [SerializeField]
+    public TextMeshProUGUI txtRedApple;
+
+    [SerializeField]
+    public TextMeshProUGUI txtStar;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,9 +37,12 @@ public class GameControllerScene2 : MonoBehaviour
     {
         ShowValeu();
         ShowHealth();
+        ShowGreenApple();
+        ShowRedApple();
+        ShowStar();
 
         //Condicion para abrir puerta
-        if (GameManager.Instance.TotalValue >= 78)
+        if (GameManager.Instance.TotalValue >= 78) //Al recolectar 5 manzanas verdes
         {
             gate.SetActive(true); // Activa la llave cuando se recolectan todas las manzanas
         }
@@ -42,9 +54,27 @@ public class GameControllerScene2 : MonoBehaviour
         txtTotalValue.text = GameManager.Instance.TotalValue.ToString();
     }
 
+    public void ShowGreenApple()
+    {
+        txtGreenApple.text = GameManager.Instance.GreenApple.ToString();
+    }
+
+    public void ShowRedApple()
+    {
+        txtRedApple.text = GameManager.Instance.RedApple.ToString();
+    }
+
+    public void ShowStar()
+    {
+        txtStar.text = GameManager.Instance.Star.ToString();
+    }
+
     public void ShowHealth()
     {
-        txtHealth.text = player.Health.ToString();
+        if (player != null && txtHealth != null)
+        {
+            txtHealth.text = player.Health.ToString();
+        }
     }
 
 }
