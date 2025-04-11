@@ -21,4 +21,10 @@ public class LoadScenes : MonoBehaviour
     {
         SceneManager.LoadScene(nameScene);
     }
+
+    public void CloseGame()
+    {
+        Application.Quit();
+        UnityEditor.EditorApplication.isPlaying = false;
+    }
 }

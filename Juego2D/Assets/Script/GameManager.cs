@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -8,6 +9,10 @@ public class GameManager : MonoBehaviour
 
     //Contador
     private int totalValue = 0;
+
+    //Musica
+    public AudioSource musicSource;
+    public bool isMusicOn = true;
 
     //Crea una instancio y la destruye si esta repetida 
     private void Awake()
@@ -36,7 +41,25 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (isMusicOn)
+        {
+            musicSource.Play();
+        }
+    }
+
+    public void ToggleMusic()
+    {
+        // Toggle the music state
+        isMusicOn = !isMusicOn;
+
+        if (isMusicOn)
+        {
+            musicSource.Play();
+        }
+        else
+        {
+            musicSource.Stop();
+        }
     }
 
     // Update is called once per frame
