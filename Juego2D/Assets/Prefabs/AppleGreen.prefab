@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 4094442420246019903}
   - component: {fileID: 21953548690028931}
   - component: {fileID: 8940587744732350755}
+  - component: {fileID: 8103119492932978615}
+  - component: {fileID: 5260973157169450096}
   m_Layer: 0
   m_Name: AppleGreen
   m_TagString: Untagged
@@ -28,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 7171015649214126839}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.6489, y: -0.8842, z: 0.008188906}
+  m_LocalPosition: {x: 4.6489, y: -0.8842, z: 0}
   m_LocalScale: {x: 0.12910211, y: 0.1155256, z: 1.1175195}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -152,3 +154,28 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8103119492932978615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7171015649214126839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19293de5e0945b3418bf20bb85e2ba9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5260973157169450096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7171015649214126839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0095f88ed71f8db4293b2236d6abcf94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  points: 2
